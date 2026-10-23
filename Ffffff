@@ -1,0 +1,12 @@
+if (getgenv().UC_LOADED) then
+	return;
+end;
+getgenv().UC_LOADED = true;
+
+if (identifyexecutor() == "Wave") then
+	getgenv().gethui = function()
+		return game:GetService("CoreGui");
+	end;	
+end;
+
+	loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/b6956594687d0095f5afdd3e2a2056ad.lua"))()
